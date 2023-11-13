@@ -1,0 +1,32 @@
+@font-face {
+  font-family: dalek;
+  src: url(./assets/fonts/Dalek.ttf);
+}
+
+html,
+body {
+  padding: 0px;
+  margin: 0px;
+  width: 100%;
+
+  background-color: #e3b261;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: dalek, monospace;
+  font-size: 64px;
+  color: #f0d9b3;
+  text-shadow: 2px 2px rgb(99, 99, 99);
+  animation: 1s ease-out 0s 1 slideDown;
+}
+@keyframes slideDown {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
