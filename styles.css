@@ -3,16 +3,26 @@
   src: url(./assets/fonts/Dalek.ttf);
 }
 
+@font-face {
+  font-family: exo;
+  src: url(./assets/fonts/Exo-thin.ttf);
+}
+
 html,
 body {
   padding: 0px;
   margin: 0px;
   width: 100%;
-
   background-color: #e3b261;
 }
 
+body::-webkit-scrollbar {
+  display: none;
+}
+
 .header {
+  text-align: center;
+  word-break: normal;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -22,6 +32,123 @@ body {
   text-shadow: 2px 2px rgb(99, 99, 99);
   animation: 1s ease-out 0s 1 slideDown;
 }
+
+.subheader {
+  text-align: center;
+  word-break: normal;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: exo, monospace;
+  color: #f0d9b3;
+  text-shadow: 2px 2px rgb(99, 99, 99);
+  font-size: 40px;
+  animation: 1s ease-out 0s 1 slideDown;
+}
+
+.container {
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 0 10 0 10px 0px;
+  animation-fill-mode: both;
+}
+
+.panel {
+  width: 100%;
+  max-width: 362px;
+  height: 500px;
+  border-radius: 50px;
+  background-size: cover;
+  background-position-x: center;
+  background-position-y: center;
+  background-repeat: no-repeat;
+  object-fit: cover;
+  background-color: white;
+  margin: 10px;
+  cursor: pointer;
+  position: relative;
+}
+
+.description {
+  position: absolute;
+  width: 100%;
+  max-width: 362px;
+  opacity: 0;
+  height: 500px;
+  border-radius: 50px;
+  background-color: rgba(44, 44, 44, 0.8);
+}
+
+.title {
+  color: rgb(240, 217, 179);
+  font-size: 24px;
+  width: 100%;
+  text-align: center;
+  font-family: dalek, monospace;
+}
+.content {
+  word-wrap: break-word;
+  color: rgb(240, 217, 179);
+  font-size: 16px;
+  width: 90%;
+  padding-top: 10px;
+  text-align: justify;
+  margin: auto;
+  font-family: exo, monospace;
+}
+
+.panel:hover .description {
+  opacity: 1;
+}
+
+.recipe-title {
+  font-family: dalek, monospace;
+  text-align: center;
+  width: 100%;
+  word-break: normal;
+  font-size: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #f0d9b3;
+  text-shadow: 2px 2px rgb(99, 99, 99);
+  animation: 1s ease-out 0s 1 slideDown;
+}
+
+.recipe-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.recipe-content {
+  background-color: rgb(240, 217, 179);
+  padding: 20px;
+  width: 80%;
+  max-width: 800px;
+  text-align: left;
+  border-radius: 30px;
+}
+
+.recipe-content p {
+  font-family: dalek, monospace;
+  font-size: 28px;
+}
+
+.recipe-container li {
+  margin-top: 10px;
+  font-size: 16px;
+  font-family: evo, monospace;
+}
+
+.recipe-container hr {
+  border-color: #e3b261;
+}
+
 @keyframes slideDown {
   0% {
     transform: translateY(-100%);
